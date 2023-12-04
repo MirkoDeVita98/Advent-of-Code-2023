@@ -1,5 +1,7 @@
 with open("aoc2_input.txt") as infile:
-    games = infile.readlines()
+    text = infile.read()
+
+games = text.split('\n')
 
 tot = 0
 for id, game in enumerate(games):

@@ -1,7 +1,9 @@
 from collections import defaultdict
 
 with open("aoc3_input.txt") as infile:
-    grid = infile.readlines()
+    text = infile.read()
+
+grid = text.split('\n')
 
 def isspecial(c):
   return c != '.' and not c.isdecimal()

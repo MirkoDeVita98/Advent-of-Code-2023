@@ -1,9 +1,9 @@
 import re
 
 with open('aoc1_input.txt') as infile:
-    words = infile.readlines()
+    text = infile.read()
 
-
+words = text.split('\n')
 def calculate_cal(word):
   first = None
   last = None

@@ -1,4 +1,4 @@
-with open("aoc2_input.tx") as infile:
+with open("aoc2_input.txt") as infile:
     games = infile.readlines()
 
 tot = 0

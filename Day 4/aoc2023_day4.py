@@ -27,11 +27,11 @@ for i, game in enumerate(games):
   num = fil_game[0].split(' ')
   win = fil_game[1].split(' ')
 
-  pow = 0
+  j = 0
   for el in win:
     if el != '' and el in num:
-      bonus[i + pow + 1] += 1 *(bonus[i])
-      pow += 1
+      bonus[i + j + 1] += (bonus[i])
+      j += 1
   
 
 count = 0

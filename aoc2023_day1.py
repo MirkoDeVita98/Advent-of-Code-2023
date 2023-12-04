@@ -1,6 +1,6 @@
 import re
 
-with open('readme.txt') as infile:
+with open('aoc1_input.txt') as infile:
     words = infile.readlines()
 
 

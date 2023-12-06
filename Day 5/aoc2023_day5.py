@@ -27,12 +27,7 @@ for i, line in enumerate(input[1 : ]):
           seeds[j] = nums[0] + (seed - nums[1])
           conv[j] = True
 
-lowest = seeds[0]
-
-for seed in seeds:
-  lowest = min(lowest, seed)
-
-print(lowest)
+print(min(x for x in seeds))
 
 def process_intervals(a, b, c):
   conv = []
@@ -91,15 +86,8 @@ for i, line in enumerate(input[1 : ]):
       if temp:
         to_process += temp 
 
-temp = []
 for interval in to_process:
   if interval != (-1, -1):
-    temp.append(interval)
-temp += processed
+    processed.append(interval)
 
-lowest = temp[0][0]
-
-for seed in temp:
-  lowest = min(lowest, seed[0])
-
-print(lowest)
+print(min(x[0] for x in processed))

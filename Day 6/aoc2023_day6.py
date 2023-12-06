@@ -23,9 +23,9 @@ def bin_search(time, distance):
       found_1 = True
       result_1 = mid_1
     elif acc * mid_1 <= distance and (acc + 1)*(mid_1 - 1) <= distance:
-      i += 1
+      i = mid_1 + 1
     else:
-      j -= 1
+      j = mid_1 - 1
 
   i, j = 0, time
 
@@ -40,9 +40,9 @@ def bin_search(time, distance):
       found_2 = True
       result_2 = mid_2 - 1
     elif acc * mid_2 > distance and (acc + 1)*(mid_2 - 1) > distance:
-      i += 1
+      i = mid_2 + 1
     else:
-      j -= 1
+      j = mid_2 - 1
 
 
 

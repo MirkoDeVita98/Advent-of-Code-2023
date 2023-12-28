@@ -3,18 +3,6 @@ with open("aoc7_input.txt") as infile:
 
 hands = text.split('\n')
 
-class HandComparator(tuple):
-    def __lt__(self, other):
-        for i in range(len(self)):
-            if self[i] != other[i]:
-                return order_card[self[i]] < order_card[other[i]]
-        return False
-
-def inc_win(winning, rank, htype):
-  for hand in sorted(htype, key=HandComparator):
-    winning += dic[hand] * rank
-    rank += 1
-
 dic = {}
 k5 = []
 k4 = []
@@ -51,6 +39,18 @@ for el in hands:
   
 
   dic[hand] = int(bid)
+
+class HandComparator(tuple):
+    def __lt__(self, other):
+        for i in range(len(self)):
+            if self[i] != other[i]:
+                return order_card[self[i]] < order_card[other[i]]
+        return False
+
+def inc_win(winning, rank, htype):
+  for hand in sorted(htype, key=HandComparator):
+    winning += dic[hand] * rank
+    rank += 1
 
 winning = 0
 rank = 1
